@@ -7,10 +7,10 @@ import {
   extendTheme,
   Heading,
   Spacer,
-  HStack,
   FormControl,
   Input,
   Button,
+  Stack,
 } from "@chakra-ui/react"
 import { ColorModeSwitcher } from "./Utils/ColorModeSwitcher"
 import { Logo } from "./Logo"
@@ -64,7 +64,7 @@ const App:React.FC<props> = () => {
             </Text>
           </Heading>
  
-          <HStack w="30%">
+          <Stack w={{base:'100%', sm:'80%', md:'40%', lg: '30%'}} direction={{base: 'row', sm: 'column', md: 'column', lg: 'row'}}>
           <FormControl id="phone-number">
               <Input isInvalid={phoneNumberError.length > 0 ? true : false} errorBorderColor="red.300" type="text" size="md" onChange={(e)=>{setPhoneNumber(e.target.value)}} required placeholder="Enter a Whatsapp number ex: +25576630XXXX"/> 
               <Text fontSize="xs" color={'red.500'}>{phoneNumberError}</Text>
@@ -72,7 +72,7 @@ const App:React.FC<props> = () => {
           <Button p={5} size="sm" onClick={(e)=>{e.preventDefault(); handleSendMessage()}} colorScheme="teal" variant="outline">
             Send Message
           </Button>
-          </HStack>
+          </Stack>
           <Spacer/>
         <Footer/>
         </VStack>
