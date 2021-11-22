@@ -32,6 +32,7 @@ const App:React.FC<props> = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [phoneNumberError, setphoneNumberError] = useState("")
 
+
   const handleSendMessage = () => {
     if(phoneNumber.length < 9 ){
       //set phone number error
@@ -63,7 +64,7 @@ const App:React.FC<props> = () => {
               with a number without saving to contacts
             </Text>
           </Heading>
- 
+          
           <Stack w={{base:'100%', sm:'80%', md:'40%', lg: '30%'}} direction={{base: 'row', sm: 'column', md: 'column', lg: 'row'}}>
           <FormControl id="phone-number">
               <Input isInvalid={phoneNumberError.length > 0 ? true : false} errorBorderColor="red.300" type="text" size="md" onChange={(e)=>{setPhoneNumber(e.target.value)}} required placeholder="Enter a Whatsapp number ex: +25576630XXXX"/> 

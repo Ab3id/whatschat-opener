@@ -1,6 +1,9 @@
 {
   "short_name": "Whatschat",
   "name": "Whatschat Nosave",
+  "description": "App for initiating whatsapp chat without saving phone number to contacts",
+  "lang": "en-US",
+   "orientation": "any",
   "icons": [
     {
       "src": "favicon.ico",
